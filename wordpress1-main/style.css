@@ -1,0 +1,170 @@
+/*
+Theme Name: Sonic Theme
+Author: Enzo
+Description: Tema One Page Profissional
+Version: 10.0
+*/  
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar */
+}
+
+body {
+    background-color: #ffffff; 
+    
+    /* COLOQUE O LINK DA SUA IMAGEM ABAIXO */
+    background-image: url('https://wallpapers.com/images/hd/green-hill-zone-2419-x-1171-thm8vzsg18qz0cp0.jpg');
+    
+    background-size: cover;        
+    background-attachment: fixed;  
+    background-position: center;   
+    
+    font-family: 'Verdana', sans-serif;
+    display: flex; flex-direction: column; min-height: 100vh;
+    color: #333;
+}
+
+/* --- HEADER PROFISSIONAL --- */
+.main-header {
+    background-color: #0047AB; /* Azul Sonic */
+    border-bottom: 4px solid #FFD700; /* Linha dourada sutil */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky; top: 0; 
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.container-header {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; /* Logo na esq, Menu na dir */
+    align-items: center;
+    height: 70px; /* Altura fixa para ficar elegante */
+}
+
+/* Título / Logo */
+.site-title h1 a { 
+    text-decoration: none; 
+    color: #FFD700; 
+    font-family: 'Arial Black', sans-serif;
+    font-size: 24px; 
+    text-shadow: 2px 2px 0px #000; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- NAVBAR (MENU) --- */
+.main-nav {
+    height: 100%;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    gap: 30px; /* Espaço entre os itens */
+}
+
+.nav-list li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff; /* Texto Branco */
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Efeito Hover (Ao passar o mouse) */
+.nav-list li a:hover {
+    color: #FFD700; /* Fica Dourado */
+}
+
+/* Pequeno traço embaixo ao passar o mouse (Detalhe profissional) */
+.nav-list li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+
+.nav-list li a:hover::after {
+    width: 100%;
+}
+
+/* --- CONTEÚDO PRINCIPAL (Landing Page) --- */
+.site-content {
+    max-width: 900px; width: 95%; margin: 60px auto;
+}
+
+/* Estilo das Seções */
+.landing-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    /* Removi a borda grossa branca para ficar mais clean */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 50px; 
+    margin-bottom: 60px;
+    text-align: center;
+    scroll-margin-top: 100px; /* Para o header não tapar o título ao rolar */
+}
+
+.landing-section h2 {
+    font-family: 'Arial Black', sans-serif; font-size: 32px; color: #333; 
+    margin-bottom: 20px; text-transform: uppercase; 
+    border-bottom: 3px solid #eee; display: inline-block; padding-bottom: 10px;
+}
+
+.landing-section p { font-size: 18px; line-height: 1.6; margin-bottom: 15px; color: #555; }
+
+/* Listas */
+.sonic-list { list-style: none; margin-top: 30px; text-align: left; }
+.sonic-list li {
+    background-color: #fff; 
+    border-left: 4px solid #ddd;
+    margin-bottom: 12px; padding: 15px; border-radius: 0 5px 5px 0;
+    font-weight: bold; font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.sonic-list li:hover { transform: translateX(5px); }
+
+/* Cores específicas */
+.box-sonic-style h2 { color: #0047AB; border-color: #0047AB; }
+.box-sonic-style .sonic-list li { border-left-color: #0047AB; }
+
+.box-tails-style h2 { color: #FF8C00; border-color: #FF8C00; }
+.box-tails-style .sonic-list li { border-left-color: #FF8C00; }
+
+.box-shadow-style h2 { color: #D32F2F; border-color: #D32F2F; }
+.box-shadow-style .sonic-list li { border-left-color: #D32F2F; background-color: #333; color: #fff; }
+
+/* --- FOOTER LIMPO --- */
+.main-footer, footer {
+    margin-top: auto;
+    background-color: #222 !important; color: #aaa !important;
+    padding: 20px 0; border: none !important; 
+    font-size: 14px; text-align: center;
+    background-image: none !important;
+}
+.main-footer::before, footer::before { content: none !important; display: none !important; }
+
+.container-footer {
+    padding: 0; display: flex; justify-content: center; gap: 40px;
+    background-color: transparent !important;
+}
